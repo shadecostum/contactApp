@@ -1,0 +1,27 @@
+<p>get-user works!</p>
+<table class="table table-striped table-bordered table-responsive-lg">
+    <thead class="bg-black text-white"> <!-- Set heading background color to black and text to white -->
+      <tr>
+        <th>UserId</th>
+        <th>Name</th>
+        <th>LastName</th>
+        <th>CountContacts</th>
+        <th>isAdmin</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody class="text-bg-danger">
+      <tr *ngFor="let user of userData" >
+        <td>{{user.userId }}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{ user.lastName}}</td>
+        <td>{{user.countContacts }}</td>
+        <td>{{user.isAdmin?"Admin":"user" }}</td>
+        
+        
+        
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-primary" routerLink="/addUser">Add data</button>

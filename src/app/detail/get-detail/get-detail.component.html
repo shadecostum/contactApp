@@ -1,0 +1,22 @@
+<p>get-detail works!</p>
+<p>get-user works!</p>
+<table class="table table-striped table-bordered table-responsive-lg">
+    <thead class="bg-black text-white"> <!-- Set heading background color to black and text to white -->
+      <tr>
+        <th>DetailId</th>
+        <th>Type</th>
+        <th>Email/Phone</th>
+        <th>CountId</th>
+      </tr>
+    </thead>
+    <tbody class="text-bg-danger">
+      <tr *ngFor="let user of detailData" >
+        <td>{{user.detailId }}</td>
+        <td>{{user.type}}</td>
+        <td>{{ user.emailOrNumber}}</td>
+        <td>{{user.contactId}}</td>
+        <td>{{user.userId}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-primary" routerLink="/addDetail">Add contact </button>

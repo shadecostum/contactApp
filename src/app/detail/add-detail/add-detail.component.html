@@ -1,0 +1,30 @@
+<p>add-detail works!</p>
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-4"></div> <!-- Left column -->
+      <div class="col-lg-4 justify-content-center mt-5">
+        <form [formGroup]="addDetailForm" (ngSubmit)="submitData(addDetailForm.value)">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" 
+            formControlName="type">
+            <label for="floatingInput">Type</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" 
+             formControlName="emailOrNumber">
+            <label for ="floatingInput">Email/Phone</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="floatingInput" 
+             formControlName="contactId">
+            <label for ="floatingInput">Contact Id</label>
+          </div>
+    
+          <button  class="btn btn-primary">Submit</button>
+        </form>
+      </div> <!-- Middle column -->
+      <div class="col-lg-4"></div> <!-- Right column -->
+    </div>
+  </div>
+  

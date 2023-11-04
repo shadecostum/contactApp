@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-4"></div> <!-- Left column -->
+      <div class="col-lg-4 justify-content-center mt-5">
+        <form [formGroup]="addUserForm" (ngSubmit)="submitData(addUserForm.value)">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" 
+            formControlName="firstName">
+            <label for="floatingInput">First Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" 
+             formControlName="lastName">
+            <label for ="floatingInput">Last Name</label>
+          </div>
+          <div class="form-check form-switch">
+            <input type="radio" formControlName="isAdmin" value="True">
+            <label class="form-check-label" for="flexSwitchCheckChecked">Admin</label>
+          </div>
+          <div class="form-check form-switch">
+            <input type="radio" formControlName="isAdmin" value="false">
+            <label class="form-check-label" for="flexSwitchCheckChecked">User</label>
+          </div>
+          <button  class="btn btn-primary">Submit</button>
+        </form>
+      </div> <!-- Middle column -->
+      <div class="col-lg-4"></div> <!-- Right column -->
+    </div>
+  </div>
+  

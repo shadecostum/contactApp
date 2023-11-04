@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-4"></div> <!-- Left column -->
+      <div class="col-lg-4 justify-content-center mt-5">
+        <form [formGroup]="addContactForm" (ngSubmit)="submitData(addContactForm.value)">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" 
+            formControlName="firstName">
+            <label for="floatingInput">First Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" 
+             formControlName="lastName">
+            <label for ="floatingInput">Last Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="floatingInput" 
+             formControlName="userId">
+            <label for ="floatingInput">User Id</label>
+          </div>
+    
+          <button  class="btn btn-primary">Submit</button>
+        </form>
+      </div> <!-- Middle column -->
+      <div class="col-lg-4"></div> <!-- Right column -->
+    </div>
+  </div>
+  
